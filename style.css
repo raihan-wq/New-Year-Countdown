@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Philosopher', sans-serif
+}
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #5F5F5F;
+    display: flex;
+}
+.container .imgBox{
+    position: relative;
+    width:450px;
+    height: 100%;
+    background:url(alone1.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+
+
+.container .countdownBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    width: calc(100% - 450px);
+}
+
+.container .countdownBox h2{
+    text-align: center;
+    font-size: 1.5em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 500;
+    line-height: 4em;
+}
+.container .countdownBox h2 span{
+    font-size: 6em;
+    font-weight: 700;
+}
+
+.container .countdownBox h2 span i{
+    font-style: initial;
+    color: #ff0;
+}
+
+.container .countdownBox .countBox{
+  margin-top: 30px;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .countdownBox .countBox div{
+    position: relative;
+    width: 100px;
+    text-align: center;
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: 500;
+    margin: 0 15px;
+    margin-top: -25px;
+
+}
+
+.container .countdownBox .countBox div:before{
+    content: 'Text';
+    position:absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    color: #fff;
+    font-size: .35em;
+    font-weight: 500;
+    line-height: 35px;
+    letter-spacing: 1px;
+    
+    text-transform:uppercase;
+}
+
+.container .countdownBox .countBox div#day:before{
+    content: 'Days';
+}
+
+.container .countdownBox .countBox div#hour:before{
+    content: 'hours';
+}
+
+.container .countdownBox .countBox div#minut:before{
+    content: 'minutes';
+}
+
+.container .countdownBox .countBox div#second:before{
+    content: 'Seconds';
+}
+.container .countdownBox .countBox div#second,
+.container .countdownBox .countBox div#second:before{
+    color: #ff0;
+}
+
+@media (max-width:991px)
+{
+    .container .imgBox{
+        display: none;
+    }
+    .container .countdownBox{
+        width: 100%;
+    }
+}
+
+
+@media (max-width:600px)
+{
+  .container .countdownBox h2
+  {
+     font-size: 1.2em ;
+  }
+  .container .countdownBox .countBox
+  {
+      height: 100px;
+  }
+  .container .countdownBox .countBox div
+  {
+      width: 80px;
+      margin: 0;
+      margin-top: -25px;
+  }
+}
